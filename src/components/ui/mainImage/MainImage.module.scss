@@ -1,0 +1,39 @@
+.mainImageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mainImage {
+  width: 595px;
+  height: 350px;
+
+  object-fit: contain;
+  border: 2px solid var(--color-accent-500);
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 1px 25px 40px var(--color-accent-100);
+  }
+}
+
+.invisibleArea {
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+
+  width: calc((100% - 595px) / 2);
+  height: 100%;
+
+  opacity: 0;
+}
+
+.leftArea {
+  left: 0;
+}
+
+.rightArea {
+  right: 0;
+}
