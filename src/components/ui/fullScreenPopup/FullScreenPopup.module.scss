@@ -1,0 +1,38 @@
+.modal_background {
+  cursor: pointer;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.modal_card {
+  position: relative;
+
+  width: 1190px;
+  height: 720px;
+
+  //object-fit: contain;
+  background: #771010;
+  border: none;
+}
+
+.modal_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+
+  //filter: blur(30px);
+}
