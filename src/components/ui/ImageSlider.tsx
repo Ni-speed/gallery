@@ -16,13 +16,22 @@ export const ImageSlider = () => {
 
   const dispatch = useAppDispatch()
   const characters = useAppSelector((state: RootState) => state.api.characters)
+  const isLoading = useAppSelector((state: RootState) => state.api.status)
 
+  console.log(isLoading)
   useEffect(() => {
     dispatch(imageThunk.fetchCharacters())
   }, [dispatch])
 
   const handleNext = () => {
     const index = value < characters.length - 1 ? value + 1 : value
+
+    if (index === characters.length - 1) {
+      const nextCharacterId = characters[characters.length - 1].id + 1
+
+      dispatch(imageThunk.getNextCharacter(nextCharacterId))
+      setValue(value + 1)
+    }
 
     setValue(index)
   }

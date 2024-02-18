@@ -35,15 +35,5 @@ export const FullScreenPopup: FC<FullScreenPopupProps> = ({
         </div>
       </div>
     </Portal>
-
-    // <Portal>
-    //   <div className={style.modal_background} onClick={() => setModalOpen(false)}>
-    //     <div className={style.modal_card}>
-    //       <div className={style.modal_content} style={{ backgroundImage: `url(${modalImageUrl})` }}>
-    //         {children}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </Portal>
   )
 }
