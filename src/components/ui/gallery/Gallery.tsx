@@ -2,23 +2,21 @@ import { useEffect, useState } from 'react'
 
 import { imageThunk } from '@/api/slice'
 import { useAppSelector } from '@/common/hooks'
-import { FullScreenPopup } from '@/components/ui/fullScreenPopup/FullScreenPopup'
+import { FullScreenPopup } from '@/components/ui'
 import { MainImage } from '@/components/ui/mainImage/MainImage'
 import { ThumbnailSlider } from '@/components/ui/thumbnailContainer/ThumbnailSlider'
 import { RootState, useAppDispatch } from '@/store/store'
 
-import style from './ImageSlider.module.scss'
+import style from './Gallery.module.scss'
 
-export const ImageSlider = () => {
+export const Gallery = () => {
   const [value, setValue] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalImageUrl, setModalImageUrl] = useState('')
 
   const dispatch = useAppDispatch()
   const characters = useAppSelector((state: RootState) => state.api.characters)
-  const isLoading = useAppSelector((state: RootState) => state.api.status)
 
-  console.log(isLoading)
   useEffect(() => {
     dispatch(imageThunk.fetchCharacters())
   }, [dispatch])
@@ -63,12 +61,7 @@ export const ImageSlider = () => {
       />
       {isModalOpen && (
         <FullScreenPopup modalImageUrl={modalImageUrl} setModalOpen={setIsModalOpen}>
-          <img
-            alt={'Modal Image'}
-            className={style.modalImage}
-            src={modalImageUrl}
-            // style={{ height: '100%', left: '50%', objectFit: 'cover' }}
-          />
+          <img alt={'Modal Image'} className={style.modalImage} src={modalImageUrl} />
         </FullScreenPopup>
       )}
     </div>

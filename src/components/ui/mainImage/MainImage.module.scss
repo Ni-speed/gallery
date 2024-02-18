@@ -28,12 +28,12 @@
   height: 100%;
 
   opacity: 0;
-}
 
-.leftArea {
-  left: 0;
-}
+  &.leftArea {
+    left: 0;
+  }
 
-.rightArea {
-  right: 0;
+  &.rightArea {
+    right: 0;
+  }
 }

@@ -1,3 +1,5 @@
+@import '@/styles/mixins';
+
 .thumbnailContainer {
   overflow-x: auto;
   display: flex;
@@ -27,18 +29,5 @@
 }
 
 .button {
-  cursor: pointer;
-
-  display: inline-block;
-
-  padding: 5px 12px;
-
-  font-size: 16px;
-  color: var(--color-success-900);
-  text-align: center;
-  text-decoration: none;
-
-  background-color: var(--color-dark-100); /* Green */
-  border: none;
-  border-radius: 5px;
+  @include button-styles;
 }

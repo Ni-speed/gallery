@@ -1,22 +1,17 @@
-import React from 'react'
+import { FC } from 'react'
 
 import { CharacterResults } from '@/common/types'
 
 import style from './MainImage.module.scss'
 
-interface MainImageProps {
+type MainImageProps = {
   character: CharacterResults
   onImageClick: (imageUrl: string) => void
   onNext: () => void
   onPrevious: () => void
 }
 
-export const MainImage: React.FC<MainImageProps> = ({
-  character,
-  onImageClick,
-  onNext,
-  onPrevious,
-}) => {
+export const MainImage: FC<MainImageProps> = ({ character, onImageClick, onNext, onPrevious }) => {
   return (
     <div className={style.mainImageContainer}>
       <div className={`${style.invisibleArea} ${style.leftArea}`} onClick={onPrevious}>

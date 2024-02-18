@@ -1,3 +1,5 @@
+@import '@/styles/mixins';
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -61,4 +63,8 @@
   height: 100%;
 
   object-fit: cover;
+}
+
+.button {
+  @include button-styles;
 }

@@ -1,11 +1,9 @@
-import { ImageSlider } from '@/components/ui/ImageSlider'
-import { Portal } from '@/components/ui/portal/Portal'
+import { Gallery } from '@/components/ui/gallery/Gallery'
 
 export function App() {
   return (
     <>
-      <ImageSlider />
-      <Portal />
+      <Gallery />
     </>
   )
 }

@@ -1,0 +1,12 @@
+@mixin button-styles {
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 16px;
+  color: var(--color-danger-300);
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-dark-100);
+  border: none;
+  border-radius: 5px;
+}

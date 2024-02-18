@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 
-import { Portal } from '@/components/ui/portal/Portal'
+import { Portal } from '@/common/utils'
 
 import style from './FullScreenPopup.module.scss'
 

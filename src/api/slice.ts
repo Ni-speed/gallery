@@ -1,16 +1,14 @@
 import { characterApi } from '@/api/character-api'
-import { CharacterResults } from '@/common/types/common-types'
+import { CharacterResults, RequestStatusType } from '@/common/types/common-types'
 import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 type ApiState = {
   characters: CharacterResults[]
-  // currentIndex: number
   error: null | string
-  status: 'failed' | 'idle' | 'loading' | 'succeeded'
+  status: RequestStatusType
 }
 const initialState: ApiState = {
   characters: [],
-  // currentIndex: 0,
   error: null,
   status: 'idle',
 }

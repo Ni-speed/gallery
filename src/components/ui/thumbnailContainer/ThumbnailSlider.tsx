@@ -5,7 +5,7 @@ import { CharacterResults } from '@/common/types'
 
 import style from './ThumbnailSlider.module.scss'
 
-interface ThumbnailProps {
+type ThumbnailProps = {
   characters: CharacterResults[]
   handleNext: () => void
   handlePrevious: () => void
