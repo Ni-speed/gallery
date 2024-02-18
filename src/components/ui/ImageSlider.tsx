@@ -63,7 +63,12 @@ export const ImageSlider = () => {
       />
       {isModalOpen && (
         <FullScreenPopup modalImageUrl={modalImageUrl} setModalOpen={setIsModalOpen}>
-          <img alt={'Modal Image'} src={modalImageUrl} />
+          <img
+            alt={'Modal Image'}
+            className={style.modalImage}
+            src={modalImageUrl}
+            // style={{ height: '100%', left: '50%', objectFit: 'cover' }}
+          />
         </FullScreenPopup>
       )}
     </div>
